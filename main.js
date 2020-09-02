@@ -6,6 +6,7 @@ const firsttexts = [
     'えいえんの',
     'ハートいっぱいの',
     '宝石みたいな',
+    '美しく咲く'
 ];
 const lasttexts = [
     'おんなのこ',
@@ -14,6 +15,7 @@ const lasttexts = [
     'お人形',
     'ダイアモンド',
     'キャンディ',
+    'くまちゃん'
 ];
 const input = document.querySelector('.input');
 const addBtn = document.querySelector('.addbtn');
@@ -46,7 +48,8 @@ function playRandomword() {
     let firsttext = firsttexts[Math.floor(Math.random() * firsttexts.length)];
     let lasttext = lasttexts[Math.floor(Math.random() * lasttexts.length)];
     const result = `${firsttext}${lasttext}!`
-    document.querySelector('.result').textContent = result;
-    const shareURL = `https://twitter.com/intent/tweet?text=${encodeURI(toUsertext)} ${encodeURI(result)}  | &url=https://haruka-nakatsuji.github.io/sindan/&hashtags=ふわふわ診断
-    document.querySelector('.sharebtn > a').href = shareURL;
+    document.querySelector('.result').textContent = result; 
+    // document.querySelector('.sharebtn > a').href = `https://twitter.com/intent/tweet?text=${encodeURI(toUsertext)} ${encodeURI(result)} | &url=https://haruka-nakatsuji.github.io/sindan/&hashtags=${encodeURI('ふわふわ診断')}&via=HARUCHAN_HONPO`;
+    const shareURL = `${toUsertext} ${result} | &url=https://haruka-nakatsuji.github.io/sindan/&hashtags=ふわふわ診断&via=HARUCHAN_HONPO`;
+    document.querySelector('.sharebtn > a').href = `https://twitter.com/intent/tweet?text=${encodeURI(shareURL)}`;
 }
