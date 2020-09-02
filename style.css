@@ -1,0 +1,141 @@
+@charset 'utf-8';
+
+body {
+    font-family: 'M PLUS Rounded 1c', 'ヒラギノ丸ゴ ProN';
+    background: #FF8EBE;
+    text-align: center;
+}
+
+.textarea {
+    width: 70%;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    padding: 32px;
+    font-size: .8rem;
+}
+
+.you {
+    font-size: 1.25rem;
+}
+
+.result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+.sharebtn {
+    display: inline-block;
+    padding: 4px 8px;
+    vertical-align: middle;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #38C4FF;
+    
+}
+
+.share {
+    text-decoration: none;
+    color: white;
+}
+
+.sharebtn img {
+    height: 20px;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+.sharebtn:hover {
+    opacity: .8;
+}
+
+.wrap {
+    margin-top: 20vh;
+}
+
+
+/* ///////////////////////////////////////// */
+
+h1 {
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    z-index: 4;
+    color: white;
+    font-size: 3rem;
+}
+
+h1 img {
+    width: 32px;
+}
+
+.wrapper {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.input {
+    padding: 16px;
+    border-radius: 8px;
+    border: none;
+    flex: 1;
+}
+
+.input:focus {
+    box-shadow: 0 0 8px 0 rgb(46, 181, 235) inset;
+    outline: 0;
+}
+
+.addbtn {
+    display: inline-block;
+    padding: 12px 16px;
+    margin-left: 8px;
+    background: rgb(255, 80, 124);
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.addbtn:hover {
+    opacity: .8;
+}
+
+.addbtn img {
+    width: 20px;
+    vertical-align: text-bottom;
+}
+
+.background {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 2;
+    background: #FF8EBE;
+}
+
+.warn {
+    position: fixed;
+    top: 53%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+@keyframes closee {
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+.close {
+    animation: closee ease-out forwards .5s;
+}
