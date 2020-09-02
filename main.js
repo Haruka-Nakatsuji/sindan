@@ -42,6 +42,7 @@ function changeDOM() {
     addBtn.classList.add('close');
     background.classList.add('close');
     document.querySelector('.warn').classList.add('close');
+    document.querySelector('h1').classList.add('close');
 }
 
 function playRandomword() {
